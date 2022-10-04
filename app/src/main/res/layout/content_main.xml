@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foregroundGravity="top"
+        android:gravity="top|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/contador"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:text="Contador"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/contadorTexto"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="top"
+            android:gravity="center|top"
+            android:text=""
+            android:textColor="#193E0B"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:translationY="-450dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/incrementar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="incrementaContador"
+            android:text="+"
+            android:textSize="56dp" />
+
+        <Button
+            android:id="@+id/decrementar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="restaContador"
+            android:text="-"
+            android:textSize="56dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/resetea"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:onClick="reseteaContador"
+            android:text="Resetear" />
+
+        <EditText
+            android:id="@+id/n_resetea"
+            android:layout_width="72sp"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="0"
+            android:inputType="numberSigned"
+            android:text="0"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/checkNegativos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Conteo Negativo"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
